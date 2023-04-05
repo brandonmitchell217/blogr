@@ -7,6 +7,9 @@ import Head from "next/head";
 import { Title } from "../components/Title";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
+import Hero from "../components/Hero";
+import InfoSplit from "../components/InfoSplit";
+import ImageText from "../components/ImageText";
 
 export default function Home() {
   gsap.registerPlugin(ScrollTrigger);
@@ -14,12 +17,9 @@ export default function Home() {
 
   return (
     <>
-      <section className="h-screen flex justify-center items-center">
-        <h1 className="text-5xl text-red-600">Title 1</h1>
-      </section>
-      <section className="h-screen flex justify-center items-center">
-        <Title>Title 2</Title>
-      </section>
+      <Hero />
+      <InfoSplit />
+      <ImageText />
     </>
   );
 }
