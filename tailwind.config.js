@@ -8,7 +8,7 @@ module.exports = {
   theme: {
     fontFamily: {
       overpass: ["Overpass"],
-      Ubuntu: ["Ubuntu"],
+      ubuntu: ["Ubuntu"],
     },
     extend: {
       colors: {
@@ -26,5 +26,5 @@ module.exports = {
       },
     },
   },
-  plugins: [],
+  plugins: [require("@tailwindcss/typography")],
 };
