@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer utilities {
+/* @layer utilities {
   .heroClip {
     clip-path: polygon(
       0 73%,
@@ -15,4 +15,4 @@
       3% 81%
     );
   }
-}
+} */

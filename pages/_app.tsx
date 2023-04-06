@@ -6,7 +6,7 @@ function MyApp({ Component, pageProps }) {
   return (
     <>
       <Head>
-        <title>Create Next App</title>
+        <title>Blogr</title>
       </Head>
       <Layout>
         <Component {...pageProps} />

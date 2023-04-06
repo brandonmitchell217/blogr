@@ -5,10 +5,7 @@ export default function Document() {
     <Html lang="en">
       <Head>
         <link rel="icon" type="image/x-icon" href="favicon.png" />
-        <meta
-          name="description"
-          content="2023 Portfolio for Brandon Mitchell"
-        />
+        <meta name="description" content="Blogr" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" />
 
@@ -17,7 +14,7 @@ export default function Document() {
           rel="stylesheet"
         />
       </Head>
-      <body className="bg-white">
+      <body className="bg-white font-overpass">
         <Main />
         <NextScript />
       </body>
