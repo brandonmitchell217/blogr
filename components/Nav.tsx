@@ -61,7 +61,7 @@ const Nav = () => {
 
   const MobileNav = () => {
     return (
-      <nav className="py-10 px-8 absolute top-0 left-0 z-50 w-full text-primary flex justify-between items-center">
+      <div className="py-10 px-8 absolute top-0 left-0 z-50 w-full text-primary flex justify-between items-center">
         <Link href={"/"}>
           <Image src={"logo.svg"} alt="Blogr Logo" width={75} height={75} />
         </Link>
@@ -126,7 +126,7 @@ const Nav = () => {
             </Button>
           </div>
         </div>
-      </nav>
+      </div>
     );
   };
 
@@ -135,7 +135,7 @@ const Nav = () => {
   } else {
     return (
       <nav className="py-4 px-8 absolute top-0 left-0 z-50 w-full text-white flex justify-between items-center">
-        <div className="flex items-center gap-12">
+        <div className="flex items-center space-x-12">
           <Link href={"/"}>
             <Image src={"logo.svg"} alt="Blogr Logo" width={100} height={100} />
           </Link>
