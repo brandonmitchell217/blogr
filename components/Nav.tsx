@@ -14,6 +14,8 @@ const navLinks = [
       { text: "Overview", href: "/" },
       { text: "Pricing", href: "/" },
       { text: "Marketplace", href: "/" },
+      { text: "Features", href: "/" },
+      { text: "Integrations", href: "/" },
     ],
   },
   {
@@ -22,6 +24,7 @@ const navLinks = [
       { text: "About", href: "/" },
       { text: "Team", href: "/" },
       { text: "Blog", href: "/" },
+      { text: "Careers", href: "/" },
     ],
   },
   {
