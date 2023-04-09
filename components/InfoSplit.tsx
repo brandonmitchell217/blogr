@@ -1,5 +1,5 @@
 import Image from "next/image";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { useMediaQuery } from "usehooks-ts";
 
 interface InfoSplitProps {
@@ -23,31 +23,47 @@ const InfoSplit = ({
   direction = "row",
 }: InfoSplitProps) => {
   const matches = useMediaQuery("(max-width: 768px)");
+  const [isMatches, setIsMatches] = useState<boolean>();
+
+  useEffect(() => {
+    matches ? setIsMatches(true) : setIsMatches(false);
+  }, [matches]);
+
   return (
-    <section className="text-primary prose-headings:font-bold prose-headings:text-2xl prose-headings:md:text-3xl prose-p:text-gray-500 prose-p:leading-6">
-      <div className="text-center py-16 px-8 container">
-        {title && <h1 className="mb-8">{title}</h1>}
+    <section className="text-primary prose-headings:font-bold prose-headings:text-2xl prose-headings:md:text-3xl prose-p:text-gray-500 prose-p:leading-6 min-h-[80vh] py-32 md:py-56">
+      {title && <h1 className="mb-16 md:mb-28 text-center">{title}</h1>}
+      <div className="text-center relative h-full">
+        {/* Where you can control 'container' padding */}
         <div
-          className={`flex flex-col-reverse items-center gap-8 ${
-            direction === "row" ? "md:flex-row" : "md:flex-row-reverse"
+          className={`h-full flex flex-col-reverse items-center gap-8 md:px-24 ${
+            direction === "row" ? "lg:flex-row" : "lg:flex-row-reverse"
           }`}
         >
-          <div className="space-y-8 md:w-1/2">
+          <div
+            className={`px-8 space-y-8 lg:w-1/2 ${
+              direction === "row" ? "lg:ml-12" : "lg:mr-12"
+            }`}
+          >
             {lists.map((list, k) => (
-              <div key={k} className="space-y-2 md:text-left md:space-y-4">
+              <div key={k} className="space-y-2 lg:text-left lg:space-y-4">
                 <h2>{list.title}</h2>
                 <p>{list.desc}</p>
               </div>
             ))}
           </div>
-          <div className="md:w-1/2">
+          <div
+            className={`lg:absolute lg:h-full lg:-top-[88px] ${
+              direction != "row" ? "lg:-left-[160px]" : "lg:-right-[100px]"
+            }`}
+          >
             <Image
               src={image}
               alt="illustration image"
-              width={matches ? 450 : 600}
-              height={matches ? 450 : 600}
+              width={isMatches ? 450 : 700}
+              height={isMatches ? 450 : 700}
               placeholder="blur"
               blurDataURL={image}
+              className={`${direction != "row" ? "lg:scale-[1.2]" : null}`}
             />
           </div>
         </div>

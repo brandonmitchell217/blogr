@@ -17,7 +17,7 @@ const Hero = () => {
   const matches = useMediaQuery("(max-width: 768px)");
   return (
     <section className="text-white prose-headings:text-4xl prose-headings:lg:text-6xl prose-headings:font-bold prose-p:font-light prose-p:lg:text-lg">
-      <div className="relative w-full px-8 pt-40 pb-32 bg-gradient-to-br from-heroGradientRed1 to-heroGradientRed2 heroClip rounded-bl-[25%] flex flex-col items-center gap-8 overflow-hidden">
+      <div className="relative w-full px-8 pt-40 pb-32 bg-gradient-to-br from-heroGradientRed1 to-heroGradientRed2 heroClip rounded-bl-[80px] flex flex-col items-center gap-8 overflow-hidden">
         <Image
           src={
             matches
