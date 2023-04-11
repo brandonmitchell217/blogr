@@ -1,10 +1,14 @@
-import React from "react";
-import Link from "next/link";
 import Button from "./Button";
 import Image from "next/image";
 import { useMediaQuery } from "usehooks-ts";
 
-const copy = {
+type CopyProps = {
+  title: string;
+  subtitle: string;
+  links: { text: string; href: string }[];
+};
+
+const copy: CopyProps = {
   title: "A modern publishing platform",
   subtitle: "Grow your audience and build your online brand",
   links: [

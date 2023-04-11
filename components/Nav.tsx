@@ -7,7 +7,12 @@ import { MdKeyboardArrowDown } from "react-icons/md";
 import { FaBars } from "react-icons/fa";
 import { AiOutlineClose } from "react-icons/ai";
 
-const navLinks = [
+type NavLinkProps = {
+  text: string;
+  subLinks?: { text: string; href: string }[];
+}[];
+
+const navLinks: NavLinkProps = [
   {
     text: "Product",
     subLinks: [
