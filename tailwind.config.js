@@ -10,6 +10,12 @@ module.exports = {
       overpass: ["Overpass"],
       ubuntu: ["Ubuntu"],
     },
+    borderRadius: {
+      cont: "80px",
+      md: "0.375rem",
+      lg: "0.5rem",
+      full: "9999px",
+    },
     extend: {
       colors: {
         redBtn: "hsl(356, 100%, 66%)",
@@ -26,5 +32,5 @@ module.exports = {
       },
     },
   },
-  plugins: [require("daisyui"), require("@tailwindcss/typography")],
+  plugins: [require("@tailwindcss/typography")],
 };

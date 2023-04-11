@@ -51,7 +51,9 @@ const InfoSplit = ({
             {lists.map((list, k) => (
               <div key={k} className="space-y-2 lg:text-left lg:space-y-4">
                 <h2 className="text-xl md:text-2xl">{list.title}</h2>
-                <p className="text-gray-500 leading-6">{list.desc}</p>
+                <p className="text-gray-500 leading-6 text-sm font-ubuntu">
+                  {list.desc}
+                </p>
               </div>
             ))}
           </div>

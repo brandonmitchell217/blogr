@@ -8,7 +8,7 @@ interface ImageTextProps {
 
 const ImageText = ({ title, desc, image }: ImageTextProps) => {
   return (
-    <section className="mt-48 mb-0 lg:my-20 bg-gradient-to-b from-bodyGradientBlue1 to-bodyGradientBlue2 relative z-[1] rounded-bl-[80px] rounded-tr-[80px] md:h-[100%] lg:h-[400px] flex justify-center items-center">
+    <section className="mt-48 mb-0 lg:my-20 bg-gradient-to-b from-bodyGradientBlue1 to-bodyGradientBlue2 relative z-[1] rounded-bl-cont rounded-tr-cont md:h-[100%] lg:h-[400px] flex justify-center items-center">
       <div className="h-full w-full absolute top-0 left-0 overflow-hidden">
         <Image
           src={"bg-pattern-circles.svg"}
@@ -31,7 +31,9 @@ const ImageText = ({ title, desc, image }: ImageTextProps) => {
         </div>
         <div className="text-white space-y-3 lg:pl-12">
           <h1 className="text-5xl font-bold">{title}</h1>
-          <p className="lg:max-w-[85%]">{desc}</p>
+          <p className="lg:max-w-[85%] text-sm font-ubuntu leading-relaxed">
+            {desc}
+          </p>
         </div>
       </div>
     </section>
