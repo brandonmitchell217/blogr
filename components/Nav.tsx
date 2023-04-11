@@ -95,7 +95,8 @@ const Nav = () => {
               <Button
                 href={"/"}
                 type="primary"
-                className="bg-gradient-to-r from-heroGradientRed1 to-heroGradientRed2 text-white"
+                nav={true}
+                className="bg-gradient-to-r from-heroGradientRed1 to-heroGradientRed2"
               >
                 Sign Up
               </Button>

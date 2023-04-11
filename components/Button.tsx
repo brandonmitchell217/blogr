@@ -8,6 +8,7 @@ interface ButtonProps {
   children: React.ReactNode;
   type?: "primary" | "secondary";
   login?: boolean;
+  nav?: boolean;
 }
 
 const Button = ({
@@ -16,9 +17,11 @@ const Button = ({
   children,
   type = "primary",
   login = false,
+  nav = false,
 }: ButtonProps) => {
-  const primary =
-    "bg-white text-redBtn border-white hover:bg-redBtnHvr hover:border-redBtnHvr hover:text-white";
+  const primary = `bg-white ${
+    nav ? "text-white" : "text-redBtn"
+  } border-white hover:bg-redBtnHvr hover:border-redBtnHvr hover:text-white`;
   const secondary = `bg-transparent text-white ${
     login
       ? "border-none hover:text-white hover:bg-transparent hover:border-transparent hover:scale-105 hover:text-footText"
