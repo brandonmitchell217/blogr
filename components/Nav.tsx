@@ -1,46 +1,12 @@
 import Link from "next/link";
 import Image from "next/image";
 import Button from "./Button";
+import { navLinks } from "../lib/navigation";
 import { useMediaQuery } from "usehooks-ts";
 import { useEffect, useState } from "react";
 import { MdKeyboardArrowDown } from "react-icons/md";
 import { FaBars } from "react-icons/fa";
 import { AiOutlineClose } from "react-icons/ai";
-
-type NavLinkProps = {
-  text: string;
-  subLinks?: { text: string; href: string }[];
-}[];
-
-const navLinks: NavLinkProps = [
-  {
-    text: "Product",
-    subLinks: [
-      { text: "Overview", href: "/" },
-      { text: "Pricing", href: "/" },
-      { text: "Marketplace", href: "/" },
-      { text: "Features", href: "/" },
-      { text: "Integrations", href: "/" },
-    ],
-  },
-  {
-    text: "Company",
-    subLinks: [
-      { text: "About", href: "/" },
-      { text: "Team", href: "/" },
-      { text: "Blog", href: "/" },
-      { text: "Careers", href: "/" },
-    ],
-  },
-  {
-    text: "Connect",
-    subLinks: [
-      { text: "Contact", href: "/" },
-      { text: "Newsletter", href: "/" },
-      { text: "LinkedIn", href: "/" },
-    ],
-  },
-];
 
 const Nav = () => {
   const [isMatching, setIsMatching] = useState<boolean>();
@@ -69,7 +35,7 @@ const Nav = () => {
 
   const MobileNav = () => {
     return (
-      <div className="py-10 px-8 absolute top-0 left-0 z-50 w-full text-primary flex justify-between items-center">
+      <nav className="py-10 px-8 container absolute top-0 left-0 z-50 w-full text-primary flex justify-between items-center">
         <Link href={"/"}>
           <Image src={"logo.svg"} alt="Blogr Logo" width={75} height={75} />
         </Link>
@@ -134,7 +100,7 @@ const Nav = () => {
             </Button>
           </div>
         </div>
-      </div>
+      </nav>
     );
   };
 
@@ -142,7 +108,7 @@ const Nav = () => {
     return <MobileNav />;
   } else {
     return (
-      <nav className="py-4 px-8 absolute top-0 left-0 z-50 w-full text-white flex justify-between items-center">
+      <nav className="py-4 px-8 container absolute top-0 left-0 z-50 w-full text-white flex justify-between items-center">
         <div className="flex items-center space-x-12">
           <Link href={"/"}>
             <Image src={"logo.svg"} alt="Blogr Logo" width={100} height={100} />
