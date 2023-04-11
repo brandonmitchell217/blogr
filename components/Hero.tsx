@@ -16,8 +16,8 @@ const copy = {
 const Hero = () => {
   const matches = useMediaQuery("(max-width: 768px)");
   return (
-    <section className="text-white prose-headings:text-4xl prose-headings:lg:text-6xl prose-headings:font-bold prose-p:font-light prose-p:lg:text-lg">
-      <div className="relative w-full px-8 pt-40 pb-32 bg-gradient-to-br from-heroGradientRed1 to-heroGradientRed2 heroClip rounded-bl-[80px] flex flex-col items-center gap-8 overflow-hidden">
+    <section className="text-white  prose-headings:font-bold prose-p:font-light prose-p:lg:text-lg">
+      <div className="relative w-full min-h-[65vh] px-8 pt-40 pb-32 bg-gradient-to-br from-heroGradientRed1 to-heroGradientRed2 heroClip rounded-bl-[80px] flex flex-col items-center gap-8 overflow-hidden">
         <Image
           src={
             matches
@@ -30,9 +30,9 @@ const Hero = () => {
           className="absolute top-36 left- scale-[2.5]"
         />
         <div className="relative z-10 w-full flex flex-col items-center gap-10 container">
-          <div className="space-y-4 text-center max-w-[70%] lg:max-w-full">
-            <h1 className=" ">{copy.title}</h1>
-            <p className="x-6">{copy.subtitle}</p>
+          <div className="space-y-4 text-center sm:max-w-[75%] lg:max-w-full">
+            <h1 className="text-4xl lg:text-6xl">{copy.title}</h1>
+            <p className="x-6 lg:text-xl">{copy.subtitle}</p>
           </div>
           <div className="flex gap-3">
             <Button href={copy.links[0].href}>{copy.links[0].text}</Button>

@@ -30,8 +30,12 @@ const InfoSplit = ({
   }, [matches]);
 
   return (
-    <section className="text-primary prose-headings:font-bold prose-headings:text-2xl prose-headings:md:text-3xl prose-p:text-gray-500 prose-p:leading-6 min-h-[80vh] py-32 md:py-56">
-      {title && <h1 className="mb-16 md:mb-28 text-center">{title}</h1>}
+    <section className="text-primary prose-headings:font-bold min-h-[80vh] py-32 md:py-42">
+      {title && (
+        <h1 className="mb-16 md:mb-28 text-center text-2xl md:text-3xl lg:text-4xl">
+          {title}
+        </h1>
+      )}
       <div className="text-center relative h-full">
         {/* Where you can control 'container' padding */}
         <div
@@ -46,8 +50,8 @@ const InfoSplit = ({
           >
             {lists.map((list, k) => (
               <div key={k} className="space-y-2 lg:text-left lg:space-y-4">
-                <h2>{list.title}</h2>
-                <p>{list.desc}</p>
+                <h2 className="text-xl md:text-2xl">{list.title}</h2>
+                <p className="text-gray-500 leading-6">{list.desc}</p>
               </div>
             ))}
           </div>

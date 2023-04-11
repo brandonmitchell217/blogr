@@ -39,7 +39,7 @@ const navLinks = [
 
 const Nav = () => {
   const [isMatching, setIsMatching] = useState<boolean>();
-  const matches = useMediaQuery("(max-width: 768px)");
+  const matches = useMediaQuery("(max-width: 880px)");
   const [isOpen, setIsOpen] = useState<boolean>(false);
   const [linkOpen, setLinkOpen] = useState<boolean[]>(() =>
     Array(navLinks.length).fill(false)
@@ -162,7 +162,7 @@ const Nav = () => {
                   <div
                     className={`${
                       linkOpen[index] ? "absolute" : "hidden"
-                    } -bottom-48 flex flex-col gap-4 w-56 bg-white p-8 text-primary rounded-md shadow-md`}
+                    } top-8 flex flex-col gap-4 w-56 bg-white p-8 text-primary rounded-md shadow-md`}
                   >
                     {link.subLinks.map((subLink, subIndex) => (
                       <Link
@@ -180,7 +180,7 @@ const Nav = () => {
           </div>
         </div>
         <div className="flex gap-4 items-center">
-          <Button href={"/"} type="secondary" className="border-none">
+          <Button href={"/"} type="secondary" login={true}>
             Login
           </Button>
           <Button href={"/"} type="primary">
