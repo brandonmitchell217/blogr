@@ -10,12 +10,6 @@ module.exports = {
       overpass: ["Overpass"],
       ubuntu: ["Ubuntu"],
     },
-    borderRadius: {
-      cont: "80px",
-      md: "0.375rem",
-      lg: "0.5rem",
-      full: "9999px",
-    },
     extend: {
       colors: {
         redBtn: "hsl(356, 100%, 66%)",
@@ -29,6 +23,9 @@ module.exports = {
         heroGradientRed2: "hsl(353, 100%, 62%)",
         bodyGradientBlue1: "hsl(237, 17%, 21%)",
         bodyGradientBlue2: "hsl(237, 23%, 32%)",
+      },
+      borderRadius: {
+        cont: "80px",
       },
     },
   },

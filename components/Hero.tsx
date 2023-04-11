@@ -1,6 +1,7 @@
 import Button from "./Button";
 import Image from "next/image";
 import { useMediaQuery } from "usehooks-ts";
+import { motion } from "framer-motion";
 
 type CopyProps = {
   title: string;
@@ -33,17 +34,24 @@ const Hero = () => {
           height={800}
           className="absolute top-36 left- scale-[2.5]"
         />
-        <div className="relative z-10 w-full flex flex-col items-center gap-10 container">
-          <div className="space-y-4 text-center sm:max-w-[75%] lg:max-w-full">
-            <h1 className="text-4xl lg:text-6xl">{copy.title}</h1>
-            <p className="x-6 lg:text-xl text-gray-100">{copy.subtitle}</p>
-          </div>
-          <div className="flex gap-3">
-            <Button href={copy.links[0].href}>{copy.links[0].text}</Button>
-            <Button href={copy.links[1].href} type="secondary">
-              {copy.links[1].text}
-            </Button>
-          </div>
+        <div className="relative z-10 w-full flex flex-col items-center container">
+          <motion.div
+            initial={{ y: "100%", opacity: 0 }}
+            animate={{ y: "0", opacity: 1 }}
+            transition={{ duration: 0.75 }}
+          >
+            <div className="space-y-4 text-center sm:max-w-[75%] lg:max-w-full">
+              <h1 className="text-4xl lg:text-6xl">{copy.title}</h1>
+              <p className="x-6 lg:text-xl text-gray-100">{copy.subtitle}</p>
+            </div>
+
+            <div className="w-full mt-10 flex justify-center gap-3">
+              <Button href={copy.links[0].href}>{copy.links[0].text}</Button>
+              <Button href={copy.links[1].href} type="secondary">
+                {copy.links[1].text}
+              </Button>
+            </div>
+          </motion.div>
         </div>
       </div>
     </section>

@@ -7,6 +7,7 @@ import { useEffect, useState } from "react";
 import { MdKeyboardArrowDown } from "react-icons/md";
 import { FaBars } from "react-icons/fa";
 import { AiOutlineClose } from "react-icons/ai";
+import { motion } from "framer-motion";
 
 const Nav = () => {
   const [isMatching, setIsMatching] = useState<boolean>();
@@ -111,7 +112,12 @@ const Nav = () => {
     return <MobileNav />;
   } else {
     return (
-      <nav className="py-4 px-8 absolute top-0 left-0 z-50 w-full text-white flex justify-between items-center">
+      <motion.nav
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 0.5, ease: "easeInOut" }}
+        className="py-4 px-8 absolute top-0 left-0 z-50 w-full text-white flex justify-between items-center"
+      >
         <div className="flex items-center space-x-12 container">
           <Link href={"/"}>
             <Image src={"logo.svg"} alt="Blogr Logo" width={100} height={100} />
@@ -161,7 +167,7 @@ const Nav = () => {
             Sign Up
           </Button>
         </div>
-      </nav>
+      </motion.nav>
     );
   }
 };
