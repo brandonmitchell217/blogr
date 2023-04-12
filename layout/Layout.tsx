@@ -17,7 +17,8 @@ const Layout = ({ children }) => {
           left: 0,
           zIndex: 100,
           transformOrigin: "left",
-          backgroundColor: "hsl(240, 10%, 16%)",
+          background:
+            "linear-gradient(90deg, hsl(237, 17%, 21%) 25%, hsl(237, 23%, 32%) 50%, hsl(13, 100%, 72%) 75%, hsl(353, 100%, 62%) 100%)",
         }}
       />
       <Nav />
