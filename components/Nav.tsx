@@ -21,6 +21,21 @@ const Nav = () => {
     setIsMatching(matches);
   }, [matches]);
 
+  useEffect(() => {
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (isOpen && e.key === "Escape") {
+        setIsOpen(false);
+        setLinkOpen(Array(navLinks.length).fill(false));
+      }
+    };
+
+    document.addEventListener("keydown", handleKeyDown);
+
+    return () => {
+      document.removeEventListener("keydown", handleKeyDown);
+    };
+  }, [isOpen]);
+
   const burgerMenu = () => {
     setIsOpen(!isOpen);
     setLinkOpen(Array(navLinks.length).fill(false));

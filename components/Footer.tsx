@@ -14,7 +14,7 @@ const icons: { icon: React.ReactNode; href: string }[] = [
 const Footer = () => {
   return (
     <motion.div initial={{ opacity: 0 }} whileInView={{ opacity: 1 }}>
-      <footer className="py-20 pl-8 bg-footBg text-white prose-headings:font-bold rounded-tr-cont">
+      <footer className="py-20 md:pl-8 bg-footBg text-white prose-headings:font-bold rounded-tr-cont">
         <div className="container flex flex-col gap-16 items-center md:flex-row md:items-start md:justify-start md:gap-32 lg:gap-44">
           <div className="flex flex-col items-center gap-4">
             <Link href={"/"}>
