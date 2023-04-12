@@ -4,6 +4,7 @@ import { navLinks } from "../lib/navigation";
 import { motion } from "framer-motion";
 import { FaFacebook, FaTwitter, FaLinkedin } from "react-icons/fa";
 import React from "react";
+import onClickFake from "../util/FakeClick";
 
 const icons: { icon: React.ReactNode; href: string }[] = [
   { icon: <FaFacebook />, href: "/" },
@@ -26,6 +27,7 @@ const Footer = () => {
                   key={index}
                   href={icon.href}
                   className="hover:text-redBtnHvr"
+                  onClick={onClickFake}
                 >
                   {icon.icon}
                 </Link>
